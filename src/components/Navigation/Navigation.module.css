@@ -1,0 +1,11 @@
+.quarterCircleTopRight {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: #112d4e;
+  border-radius: 0 0 0 100px;
+  -moz-border-radius: 0 0 0 100px;
+  -webkit-border-radius: 0 0 0 100px;
+}
