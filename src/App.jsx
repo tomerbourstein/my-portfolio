@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutMe from "./components/AboutMe/AboutMe";
 import HeyThere from "./components/AboutMe/HeyThere";
 import TechStack from "./components/AboutMe/TechStack";
 import Header from "./components/Header/Header";
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <HeyThere />
       <TechStack />
+      <AboutMe />
     </div>
   );
 }
