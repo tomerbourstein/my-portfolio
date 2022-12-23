@@ -1,0 +1,17 @@
+.roundedRectangle {
+  margin: 0 auto;
+  width: 50rem;
+  height: 7rem;
+  background-color: #f9f7f7;
+  border-radius: 25px;
+  border: 5px solid #dbe2ef;
+}
+.roundedRectanglePlaceTop {
+  position: relative;
+  bottom: 3.5rem;
+}
+
+.roundedRectanglePlaceBottom {
+  position: relative;
+  top: 3.5rem;
+}

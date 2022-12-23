@@ -1,0 +1,17 @@
+.techStackSection {
+  width: 100%;
+}
+.techStack {
+  width: 20rem;
+  margin-bottom: -7rem;
+}
+
+.sectionEnd {
+  background-color: #dbe2ef;
+  height: 7.5rem;
+}
+
+.rectangle {
+  position: relative;
+  bottom: 5rem;
+}
