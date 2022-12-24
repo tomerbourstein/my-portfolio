@@ -6,7 +6,7 @@ import Witcher from "../../assets/the-witcher-preview.png";
 import Quiz from "../../assets/quiz-game-preview.png";
 import Cocktails from "../../assets/cocktails-app-preview.png";
 import Kuperman from "../../assets/kuperman-preview.png";
-import GitHub from "../../assets/github.png";
+import GitHub from "../../assets/icons/github-cloud.png";
 
 const myProjects = [
   {
