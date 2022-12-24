@@ -3,9 +3,7 @@ import RoundedRectangle from "../UI/RoundedRectangle";
 const AboutMe = () => {
   return (
     <section id="AboutMe" className={classes.aboutMe}>
-      <div className="sectionEdge">
-        <RoundedRectangle top={false} title="ABOUT ME"></RoundedRectangle>
-      </div>
+      <RoundedRectangle top={false} title="ABOUT ME" />
 
       <div className={classes.aboutText}>
         <p>
@@ -17,18 +15,19 @@ const AboutMe = () => {
 
         <p>
           At my spare time I love music and concerts, I love wine, cocktails and
-          to have my friends over for a drink,{"\n"}
-          I love fantasy stories such as
-          Game of Thrones, The Lord of The Rings, and The Witcher.
+          to have my friends over for a drink,{"\n"}I love fantasy stories such
+          as Game of Thrones, The Lord of The Rings, and The Witcher.
         </p>
 
         <p>
           I taught myself coding, I'm a JavaScript enthusiast with quick
-          learning abilities, diligent, ambitious and highly motivated.{"\n"}
-          I enjoy creating web applications with React and know my way around with
+          learning abilities, diligent, ambitious and highly motivated.{"\n"}I
+          enjoy creating web applications with React and know my way around with
           essential JavaScript libraries
         </p>
       </div>
+      <RoundedRectangle top={true} title="DOWNLOAD RESUME" />
+
     </section>
   );
 };

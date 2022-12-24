@@ -4,6 +4,7 @@ import HeyThere from "./components/AboutMe/HeyThere";
 import TechStack from "./components/AboutMe/TechStack";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <HeyThere />
       <TechStack />
       <AboutMe />
+      <Projects />
     </div>
   );
 }

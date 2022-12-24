@@ -45,7 +45,14 @@ h2 {
   word-spacing: 5px;
 }
 
+h3 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.1rem;
+  margin: 0.9rem 0;
+  letter-spacing: 3.8px;
+}
 .sectionEdge {
+  height: 5.5rem;
   background-color: #dbe2ef;
-  height: 7.5rem;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
 }

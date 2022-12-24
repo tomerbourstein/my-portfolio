@@ -1,0 +1,14 @@
+.projectsSection h2 {
+    letter-spacing: 15px;
+}
+
+.projectsSection img {
+  width: 3rem;
+}
+
+.projectsSection span {
+  text-align: start;
+}
+.wrapper {
+  margin: 7rem 0;
+}

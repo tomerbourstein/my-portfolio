@@ -10,14 +10,10 @@ const TechStack = () => {
           className={classes.techStack}
           src={StackImage}
           alt="PC Screen with Tech Logos"
-          />
+        />
       </div>
 
-      <div className="sectionEdge">
-        <RoundedRectangle top={true} title="MY TECH STACK" logos={true}>
-          
-        </RoundedRectangle>
-      </div>
+      <RoundedRectangle top={true} title="MY TECH STACK" logos={true} />
     </section>
   );
 };

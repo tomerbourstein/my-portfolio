@@ -1,16 +1,16 @@
 .aboutMe h2 {
   padding: 3rem;
-  letter-spacing: 30px;
+  letter-spacing: 15px;
 }
 
 .aboutText {
   margin: 7rem auto;
-  width: 50rem;
+  width: 35rem;
   text-align: justify;
   white-space: pre-wrap;
   line-height: 1.6;
 }
 
 .aboutText p {
-    padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }

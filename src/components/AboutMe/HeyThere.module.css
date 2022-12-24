@@ -4,7 +4,10 @@
   gap: 2rem;
   margin-bottom: 10rem;
 }
-
+.heyThere img {
+  width: 10rem;
+  border-radius: 100px;
+}
 .heyThere img {
   margin: 0 auto;
 }
