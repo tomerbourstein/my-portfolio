@@ -1,9 +1,11 @@
 .projectsSection h2 {
-  letter-spacing: 15px;
+  padding: 0;
+  /* margin-top: 2rem; */
+  letter-spacing: 13px;
 }
 
 .projectsSection img {
-  width: 4rem;
+  width: 3rem;
 }
 
 .projectsSection span {
@@ -11,4 +13,9 @@
 }
 .wrapper {
   margin: 7rem 0;
+}
+
+.projectsBottom h2{
+  margin-top: 1.5rem;
+
 }

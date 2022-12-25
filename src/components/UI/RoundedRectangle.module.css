@@ -1,8 +1,8 @@
 .roundedRectangle {
   padding: 0 1rem;
   margin: 0 auto;
-  width: 35rem;
-  height: 7rem;
+  width: 30rem;
+  height: 5rem;
   background-color: #f9f7f7;
   border-radius: 25px;
   border: 5px solid #dbe2ef;
@@ -12,12 +12,12 @@
 }
 .roundedRectanglePlaceTop {
   position: relative;
-  bottom: 3.5rem;
+  bottom: 2.5rem;
 }
 
 .roundedRectanglePlaceBottom {
   position: relative;
-  top: 1.5rem;
+  top: 2.5rem;
 }
 
 .subContent {

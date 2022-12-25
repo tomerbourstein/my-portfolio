@@ -58,12 +58,15 @@ const Projects = () => {
           />
         ))}
       </div>
+
+      <div className={classes.projectsBottom}>
       <RoundedRectangle
         top={true}
         title="FOR MORE PROJECTS"
         subtitle="Visit my GitHub"
         icon={GitHub}
-      />
+        />
+        </div>
     </section>
   );
 };
