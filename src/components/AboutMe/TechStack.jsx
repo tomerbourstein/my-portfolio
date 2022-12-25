@@ -17,20 +17,20 @@ import vite from "../../assets/stack/vite.svg";
 import create from "../../assets/stack/create.svg";
 
 const images = [
-  { image: react, title: "React" },
-  { image: git, title: "Git" },
   { image: firebase, title: "Firebase" },
-  { image: bootstrap, title: "Bootstrap" },
-  { image: html, title: "HTML" },
-  { image: axios, title: "Axios" },
-  { image: css, title: "CSS" },
   { image: redux, title: "Redux" },
+  { image: git, title: "Git" },
+  { image: react, title: "React" },
+  { image: bootstrap, title: "Bootstrap" },
+  // { image: axios, title: "Axios" },
   { image: mui, title: "Material-UI" },
+  { image: html, title: "HTML" },
   { image: api, title: "REST api" },
   { image: vite, title: "Vite" },
   { image: npm, title: "npm" },
-  { image: vscode, title: "VS Code" },
-  { image: create, title: "Create React" },
+  { image: css, title: "CSS" },
+  // { image: vscode, title: "VS Code" },
+  // { image: create, title: "Create React" },
 ];
 const TechStack = () => {
   return (
@@ -43,16 +43,29 @@ const TechStack = () => {
         />
       </div>
 
+      <h2>MY STACK</h2>
       <div className="sectionEdge">
         <div className={classes.roundedRectangle}>
-          <h2>MY TECH STACK</h2>
           <div className={classes.container}>
-            {images.map((image, index) => (
-              <div key={index} className={classes.icons}>
-                <span>{image.title}</span>
-                <img  src={image.image} className={classes.icon} />
+            <div className={classes.wrapper}>
+              <div className={classes.iconBoxRight}>
+                {images.map((image, index) => (
+                  <div key={index}>
+                    <img src={image.image} className={classes.icon} />
+                    <span>{image.title}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className={classes.iconBoxLeft}>
+                {images.map((image, index) => (
+                  <div key={index}>
+                    <img src={image.image} className={classes.icon} />
+                    <span>{image.title}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

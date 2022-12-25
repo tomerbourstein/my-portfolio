@@ -13,11 +13,13 @@
 .roundedRectanglePlaceTop {
   position: relative;
   bottom: 2.5rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
 }
 
 .roundedRectanglePlaceBottom {
   position: relative;
   top: 2.5rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .subContent {
