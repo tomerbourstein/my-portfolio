@@ -16,7 +16,7 @@
 .shadow {
   margin: auto;
   background: rgb(117, 115, 115);
-  width: 9rem;
+  width: 7.8rem;
   height: 0.5rem;
   border-radius: 50%;
   filter: blur(3px);
@@ -41,12 +41,12 @@
 
 @keyframes shadowAnimation {
   0% {
-    width: 7.8rem;
+    width: 7.2rem;
   }
   50% {
-    width: 9rem;
+    width: 7.8rem;
   }
   100% {
-    width: 7.8rem;
+    width: 7.2rem;
   }
 }

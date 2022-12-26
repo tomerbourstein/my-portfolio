@@ -38,7 +38,7 @@
 
 .iconBoxRight {
   display: flex;
-  animation: run 12s linear infinite;
+  animation: run 30s linear infinite;
 }
 
 .iconBoxLeft {
@@ -47,7 +47,7 @@
   position: relative;
   bottom: 4.7rem;
   left: -100%;
-  animation: run2 12s linear 6s infinite;
+  animation: run2 30s linear 15s infinite;
 }
 
 .icon {
