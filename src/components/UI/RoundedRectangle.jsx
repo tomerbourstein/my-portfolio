@@ -1,7 +1,7 @@
 import classes from "./RoundedRectangle.module.css";
 
 const RoundedRectangle = (props) => {
-  const { top, title, subtitle, icon } = props;
+  const { top, title, titleIcon, subtitle, subIcon } = props;
 
   const style = top
     ? classes.roundedRectanglePlaceTop
@@ -9,14 +9,21 @@ const RoundedRectangle = (props) => {
   return (
     <div className="sectionEdge">
       <div className={`${classes.roundedRectangle} ${style}`}>
-        <h2>{title}</h2>
-        <div className={classes.subContent}>
-          {subtitle ? <span> {subtitle} </span> : null}
-          {icon ? (
+        <div className={classes.mainContent}>
+          {titleIcon ? (
             <span>
-              <img src={icon} alt={icon} />
+              <img src={titleIcon} alt={titleIcon} />
             </span>
           ) : null}
+          <div className={classes.subContent}>
+            <h2>{title}</h2>
+            {subtitle ? <span> {subtitle} </span> : null}
+            {subIcon ? (
+              <span>
+                <img src={subIcon} alt={subIcon} />
+              </span>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>

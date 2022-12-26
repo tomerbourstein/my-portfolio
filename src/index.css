@@ -41,8 +41,7 @@ h2 {
 
 h2 {
   font-size: 1.3rem;
-  padding: 1rem;
-  word-spacing: 5px;
+  /* word-spacing: 5px; */
 }
 
 h3 {
@@ -62,5 +61,5 @@ h4 {
   height: 5.5rem;
   background-color: #dbe2ef;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
 }

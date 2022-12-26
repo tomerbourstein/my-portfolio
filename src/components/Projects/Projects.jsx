@@ -7,6 +7,7 @@ import Quiz from "../../assets/quiz-game-preview.png";
 import Cocktails from "../../assets/cocktails-app-preview.png";
 import Kuperman from "../../assets/kuperman-preview.png";
 import GitHub from "../../assets/icons/github-cloud.png";
+import ProjectsIcon from "../../assets/icons/projects.png";
 
 const myProjects = [
   {
@@ -46,7 +47,11 @@ const myProjects = [
 const Projects = () => {
   return (
     <section id="projects" className={classes.projectsSection}>
-      <RoundedRectangle top={false} title="FEATURED PROJECTS" />
+      <RoundedRectangle
+        top={false}
+        title="featured projects"
+        titleIcon={ProjectsIcon}
+      />
       <div className={classes.wrapper}>
         {myProjects.map((project, index) => (
           <SingleProject
@@ -60,13 +65,14 @@ const Projects = () => {
       </div>
 
       <div className={classes.projectsBottom}>
-      <RoundedRectangle
-        top={true}
-        title="FOR MORE PROJECTS"
-        subtitle="Visit my GitHub"
-        icon={GitHub}
+        <RoundedRectangle
+          top={true}
+          title="for additional projects"
+          titleIcon={GitHub}
+          subtitle="visit my GitHub"
+          // subIcon={GitHub}
         />
-        </div>
+      </div>
     </section>
   );
 };

@@ -1,11 +1,11 @@
 .projectsSection h2 {
-  padding: 0;
+  /* padding: 0; */
   /* margin-top: 2rem; */
-  letter-spacing: 13px;
+  letter-spacing: 5px;
 }
 
 .projectsSection img {
-  width: 3rem;
+  /* width: 3rem; */
 }
 
 .projectsSection span {
@@ -16,6 +16,6 @@
 }
 
 .projectsBottom h2{
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 
 }
