@@ -70,7 +70,6 @@ const Projects = () => {
           title="for additional projects"
           titleIcon={GitHub}
           subtitle="visit my GitHub"
-          // subIcon={GitHub}
         />
       </div>
     </section>

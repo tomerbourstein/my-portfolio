@@ -7,14 +7,14 @@ import Download from "../../assets/icons/download.png";
 const AboutMe = () => {
   return (
     <section id="AboutMe" className={classes.aboutMe}>
-      <RoundedRectangle top={false} title="more about me " titleIcon={About}/>
+      <RoundedRectangle top={false} title="more about me " titleIcon={About} />
 
       <div className={classes.aboutText}>
         <p>
           I always had a soft spot for web development, at the age of 11, I
           started building webpages in HTML.{"\n"}
-          It didn't work out as a child and I became an Audio Engineer specialized
-          in audio recording and studio acoustics.
+          It didn't work out as a child and I became an Audio Engineer
+          specialized in audio recording and studio acoustics.
         </p>
 
         <p>
@@ -32,7 +32,11 @@ const AboutMe = () => {
           of Marvel Cinematic Universe.
         </p>
       </div>
-      <RoundedRectangle top={true} title="download resume" titleIcon={Download}/>
+      <RoundedRectangle
+        top={true}
+        title="download resume"
+        titleIcon={Download}
+      />
     </section>
   );
 };

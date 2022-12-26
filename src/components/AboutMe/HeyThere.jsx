@@ -8,9 +8,10 @@ const HeyThere = () => {
         <p>Hey there, I'm Tomer, a self-taught JavaScript enthusiast</p>
         <p>I enjoy creating web apps with React</p>
       </div>
-
-      <img src={Avatar} alt="Tomer Bourstein Avatar" />
-
+      <div>
+        <img src={Avatar} alt="Tomer Bourstein Avatar" />
+        <div className={classes.shadow}></div>
+      </div>
       <span>keep scrolling</span>
     </section>
   );

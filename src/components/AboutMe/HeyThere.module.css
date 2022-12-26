@@ -5,15 +5,48 @@
   margin-bottom: 10rem;
 }
 .heyThere img {
-  width: 10rem;
-  outline: 6px solid #3F72AF;
-  border: 3px solid #F9F7F7;
-  border-radius: 100%;
-}
-.heyThere img {
   margin: 0 auto;
+  width: 10rem;
+  outline: 3.5px solid #3f72af;
+  border: 4px solid #f9f7f7;
+  border-radius: 100%;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
+.shadow {
+  margin: auto;
+  background: rgb(117, 115, 115);
+  width: 9rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: shadowAnimation 3s ease-in-out infinite;
+}
 .heyThere p {
   margin: 0;
+  letter-spacing: 0.8px;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shadowAnimation {
+  0% {
+    width: 7.8rem;
+  }
+  50% {
+    width: 9rem;
+  }
+  100% {
+    width: 7.8rem;
+  }
 }
