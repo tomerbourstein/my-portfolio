@@ -1,17 +1,23 @@
-import { useState } from "react";
-import classes from "./Navigation.module.css";
+import { Fragment, useEffect } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
+import useCheckScroll from "../../hooks/useCheckScroll";
+import classes from "./Navigation.module.css";
+
 const Navigation = () => {
-  // const [isOpen, setIsOpen] = useState(false);
   const { ref, isMenuOpen, setIsMenuOpen } = useClickOutside(false);
+  const { showMenu } = useCheckScroll(true);
   let activeMenu = isMenuOpen ? classes.open : null;
+  let fade = showMenu ? classes.fadeOut : classes.fadeIn;
 
   const openMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
   return (
-    <div ref={ref} className={`${classes.quarterCircleTopRight} ${activeMenu}`}>
+    <div
+      ref={ref}
+      className={`${classes.quarterCircleTopRight} ${activeMenu} ${fade}`}
+    >
       <div className={classes.hamburger} onClick={openMenu}>
         <div className={classes.hamburgerLine}></div>
         <div className={classes.hamburgerLine}></div>
