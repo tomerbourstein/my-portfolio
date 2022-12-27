@@ -61,6 +61,8 @@ h4 {
 .sectionEdge {
   height: 5.5rem;
   background-color: #dbe2ef;
-  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+
+  /* background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"); */
   /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
 }
