@@ -1,0 +1,30 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+}
+
+#header,
+a,
+a::after {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Playfair Display SC', serif; 
+
+}
+
+.homeButton {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #112d4e;
+}
+.menuButtons {
+  display: flex;
+  gap: 2rem;
+}

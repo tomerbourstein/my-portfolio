@@ -1,0 +1,11 @@
+.projectsSection h2 {
+  letter-spacing: 5px;
+}
+
+.projectsSection span {
+  text-align: start;
+}
+
+.wrapper {
+  margin: 7rem 0;
+}

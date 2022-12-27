@@ -1,0 +1,45 @@
+.roundedRectangle {
+  padding: 0 1rem;
+  margin: 0 auto;
+  width: 30rem;
+  height: 5rem;
+  background-color: #f9f7f7;
+  border-radius: 25px;
+  border: 5px solid #dbe2ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roundedRectanglePlaceTop {
+  position: relative;
+  bottom: 2.5rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
+}
+
+.roundedRectanglePlaceBottom {
+  position: relative;
+  top: 2.5rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.subContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.subContent span {
+  font-size: 1.3rem;
+  letter-spacing: 12px;
+}

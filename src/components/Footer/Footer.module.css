@@ -1,0 +1,110 @@
+.roundedRectangle {
+  padding: 0 2rem;
+  margin: 0 auto;
+  width: 35rem;
+  height: 7rem;
+  background-color: #112d4e;
+  color: #dbe2ef;
+  border-radius: 25px;
+  border: 5px solid #dbe2ef;
+  position: relative;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.roundedRectangle h2 {
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+.roundedRectangle img {
+  width: 4rem;
+}
+
+footer {
+  background-color: #112d4e;
+  letter-spacing: 0.5px;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.container {
+  width: 50rem;
+  margin: 6rem auto 0;
+  text-align: justify;
+  display: flex;
+  gap: 7.3rem;
+  color: #dbe2ef;
+}
+
+.about {
+  width: 16.666rem;
+  line-height: 1.6;
+}
+.heading {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.heading img {
+  padding: 0.5rem 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.avatar {
+  margin: 0;
+  padding: 0 !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 100px;
+}
+
+.projectsAndContact {
+  width: 24rem;
+  text-align: start;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4rem;
+}
+
+.projects,
+.socials {
+  width: 10rem;
+}
+
+.footerItem {
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemHeading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footerItemImage img {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.footerItemHeading {
+  font-family: "Playfair Display SC", serif;
+  font-size: 0.8rem;
+}
+
+.footerItemText {
+  font-size: 0.7rem;
+}
+
+.copyrights {
+  padding: 4rem 0 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.6rem;
+}

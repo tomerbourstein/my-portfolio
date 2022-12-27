@@ -1,0 +1,75 @@
+.roundedRectangle {
+  background-color: #dbe2ef !important;
+  margin: 0 auto;
+  width: 39rem;
+  height: 8rem;
+  border-radius: 25px;
+  border: 5px solid #f9f7f7;
+  position: relative;
+  bottom: 3.5rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
+}
+
+.techStackSection {
+  width: 100%;
+}
+
+.techStack {
+  width: 20rem;
+  margin-bottom: -7rem;
+}
+
+.techStackSection h2 {
+  font-size: 0.7rem;
+  letter-spacing: 15px;
+  padding: 0;
+  position: relative;
+  bottom: 4rem;
+}
+
+.container {
+  width: 39rem;
+  margin: 2.25rem 0 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.iconBoxRight {
+  display: flex;
+  animation: run 30s linear infinite;
+}
+
+.iconBoxLeft {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 4.7rem;
+  left: -100%;
+  animation: run2 30s linear 15s infinite;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes run2 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
