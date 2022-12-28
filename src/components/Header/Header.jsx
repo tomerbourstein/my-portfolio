@@ -1,5 +1,6 @@
+import { scrollToId } from "../../utils";
+
 import classes from "./Header.module.css";
-import Logo from "../../assets/TB-dark-blue-on-off-white.png";
 const sourceCode = `</>`;
 const Header = () => {
   return (
@@ -12,16 +13,19 @@ const Header = () => {
         </div>
 
         <div className={classes.menuButtons}>
-          <a href="">
+          <a
+            href="/"
+            onClick={(event) => scrollToId(event, "techStackSection")}
+          >
             <span>Stack</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "AboutMe")}>
             <span>About</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "projects")}>
             <span>Projects</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "footer")}>
             <span>Contact</span>
           </a>
         </div>
