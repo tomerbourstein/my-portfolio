@@ -10,10 +10,13 @@ const Navigation = () => {
   let activeMenu = isMenuOpen ? classes.open : classes.notOpen;
   let fade = pageScrollTop ? classes.fadeOut : classes.fadeIn;
   let entranceAnimation = listItemsShow ? classes.slideIn : classes.slideOut;
+  let hamburgerAnimation = isMenuOpen
+    ? classes.clicked
+    : classes.notClicked;
   const openMenu = () => {
     setIsMenuOpen((prevStateMenu) => {
       // setTimeout(() => {
-        setListItemsShow((prevStateList) => !prevStateList);
+      setListItemsShow((prevStateList) => !prevStateList);
       // }, 500);
       return !prevStateMenu;
     });
@@ -25,9 +28,9 @@ const Navigation = () => {
       className={`${classes.quarterCircleTopRight} ${activeMenu} ${fade}`}
     >
       <div className={classes.hamburger} onClick={openMenu}>
-        <div className={classes.hamburgerLine}></div>
-        <div className={classes.hamburgerLine}></div>
-        <div className={classes.hamburgerLine}></div>
+        <div className={`${classes.hamburgerLine} ${hamburgerAnimation}`}></div>
+        <div className={`${classes.hamburgerLine} ${hamburgerAnimation}`}></div>
+        <div className={`${classes.hamburgerLine} ${hamburgerAnimation}`}></div>
 
         {/* {isMenuOpen && ( */}
         <div className={`${classes.menuButtons} ${entranceAnimation}`}>
