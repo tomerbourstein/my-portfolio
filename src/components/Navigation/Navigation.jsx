@@ -1,5 +1,6 @@
 import useClickOutside from "../../hooks/useClickOutside";
 import useCheckScroll from "../../hooks/useCheckScroll";
+import { scrollToId } from "../../utils";
 import classes from "./Navigation.module.css";
 
 const Navigation = () => {
@@ -19,11 +20,7 @@ const Navigation = () => {
     });
   };
 
-  const scrollToId = (event, id) => {
-    event.preventDefault();
-    let section = document.getElementById(id);
-    section && section.scrollIntoView({ behavior: "smooth" }, true);
-  };
+
   return (
     <div
       ref={ref}
