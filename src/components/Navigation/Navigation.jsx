@@ -1,27 +1,29 @@
-import { Fragment, useEffect, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import useCheckScroll from "../../hooks/useCheckScroll";
 import classes from "./Navigation.module.css";
 
 const Navigation = () => {
-  const [listItemsShow, setListItemsShow] = useState(false);
-  const { ref, isMenuOpen, setIsMenuOpen } = useClickOutside(false);
+  const { ref, isMenuOpen, setIsMenuOpen, listItemsShow, setListItemsShow } =
+    useClickOutside(false);
   const { pageScrollTop } = useCheckScroll(true);
+
   let activeMenu = isMenuOpen ? classes.open : classes.notOpen;
   let fade = pageScrollTop ? classes.fadeOut : classes.fadeIn;
   let entranceAnimation = listItemsShow ? classes.slideIn : classes.slideOut;
-  let hamburgerAnimation = isMenuOpen
-    ? classes.clicked
-    : classes.notClicked;
+  let hamburgerAnimation = isMenuOpen ? classes.clicked : classes.notClicked;
+
   const openMenu = () => {
+    setListItemsShow((prevStateList) => !prevStateList);
     setIsMenuOpen((prevStateMenu) => {
-      // setTimeout(() => {
-      setListItemsShow((prevStateList) => !prevStateList);
-      // }, 500);
       return !prevStateMenu;
     });
   };
 
+  const scrollToId = (event, id) => {
+    event.preventDefault();
+    let section = document.getElementById(id);
+    section && section.scrollIntoView({ behavior: "smooth" }, true);
+  };
   return (
     <div
       ref={ref}
@@ -32,22 +34,23 @@ const Navigation = () => {
         <div className={`${classes.hamburgerLine} ${hamburgerAnimation}`}></div>
         <div className={`${classes.hamburgerLine} ${hamburgerAnimation}`}></div>
 
-        {/* {isMenuOpen && ( */}
         <div className={`${classes.menuButtons} ${entranceAnimation}`}>
-          <a href="">
+          <a
+            href="/"
+            onClick={(event) => scrollToId(event, "techStackSection")}
+          >
             <span>Stack</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "AboutMe")}>
             <span>About</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "projects")}>
             <span>Projects</span>
           </a>
-          <a href="">
+          <a href="/" onClick={(event) => scrollToId(event, "footer")}>
             <span>Contact</span>
           </a>
         </div>
-        {/* )} */}
       </div>
     </div>
   );

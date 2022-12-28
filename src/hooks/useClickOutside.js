@@ -2,11 +2,14 @@ import { useState, useEffect, useRef } from "react";
 
 export default function useClickOutside(initialIsMenuOpen) {
   const [isMenuOpen, setIsMenuOpen] = useState(initialIsMenuOpen);
+  const [listItemsShow, setListItemsShow] = useState(false);
+
   const ref = useRef(null);
 
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
       setIsMenuOpen(false);
+      setListItemsShow(false);
     }
   };
 
@@ -17,5 +20,5 @@ export default function useClickOutside(initialIsMenuOpen) {
     };
   }, []);
 
-  return { ref, isMenuOpen, setIsMenuOpen };
+  return { ref, isMenuOpen, setIsMenuOpen, listItemsShow, setListItemsShow };
 }

@@ -14,7 +14,7 @@ import EmailFooter from "../../assets/icons/email-footer.png";
 
 const Footer = () => {
   return (
-    <footer className={classes.footer}>
+    <footer id="footer" className={classes.footer}>
       <div className="sectionEdge">
         <div className={classes.roundedRectangle}>
           <h2>Get in touch</h2>
