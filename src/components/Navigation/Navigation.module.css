@@ -100,7 +100,7 @@
 }
 
 .clicked:nth-of-type(3) {
-  transform: rotate(45deg) translateY(-6px) translateX(-6px);
+  transform: rotate(45deg) translateY(-7px) translateX(-6px);
   transition: transform 0.2s linear;
 }
 
