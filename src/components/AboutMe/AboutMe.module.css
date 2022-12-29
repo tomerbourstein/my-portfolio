@@ -8,8 +8,27 @@
   text-align: justify;
   white-space: pre-wrap;
   line-height: 1.6;
+  /* position: absolute;  */
 }
 
 .aboutText p {
   padding-bottom: 0.5rem;
+  /* transition: opacity 0.7 ease-in-out; */
+}
+
+.slideIn {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out,
+    opacity 0.7s ease-in-out;
+  transition-delay: 250ms;
+}
+
+.slideOut {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  opacity: 0.015;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
 }

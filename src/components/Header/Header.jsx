@@ -9,7 +9,7 @@ const Header = () => {
     <header id="header">
       <div className={classes.container}>
         <div>
-          <a href="/header" className={classes.homeButton}>
+          <a href="/" className={classes.homeButton}>
             <span> {sourceCode} </span>
           </a>
         </div>
