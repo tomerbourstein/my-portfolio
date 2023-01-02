@@ -4,17 +4,21 @@ import RoundedRectangle from "../UI/RoundedRectangle";
 
 import About from "../../assets/icons/about.png";
 import Download from "../../assets/icons/download.png";
-
+import cv from "../../../public/files/tb-cv-dec-22.pdf";
 const AboutMe = () => {
   const { firstP, secondP, thirdP } = useCheckScroll(false);
   let playAnimationFirst = firstP ? classes.slideIn : classes.slideOut;
   let playAnimationSecond = secondP ? classes.slideIn : classes.slideOut;
   let playAnimationThird = thirdP ? classes.slideIn : classes.slideOut;
 
-  // useEffect(() => {
-  //   if (isScrolledToTarget) playAnimation = classes.slideIn;
-  //   else playAnimation = classes.slideOut;
-  // }, [isScrolledToTarget]);
+  const downloadHandler = () => {
+    var link = document.createElement("a");
+    link.href = cv;
+    link.download = "Tomer-2023.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="AboutMe" className={classes.aboutMe}>
@@ -43,11 +47,14 @@ const AboutMe = () => {
           of Marvel Cinematic Universe.
         </p>
       </div>
-      <RoundedRectangle
-        top={true}
-        title="download resume"
-        titleIcon={Download}
-      />
+
+      <button onClick={downloadHandler}>
+        <RoundedRectangle
+          top={true}
+          title="download resume"
+          titleIcon={Download}
+        />
+      </button>
     </section>
   );
 };
