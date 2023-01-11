@@ -9,3 +9,11 @@
 .wrapper {
   margin: 7rem 0;
 }
+
+.projectsSection button,
+.projectsSection button:active,
+.projectsSection button:focus {
+  all: unset;
+  width: 100%;
+  cursor: pointer;
+}
