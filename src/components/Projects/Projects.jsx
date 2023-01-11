@@ -44,6 +44,11 @@ const myProjects = [
   },
 ];
 
+const buttonClickHandler = (event) => {
+  event.preventDefault();
+  window.open("https://github.com/tomerbourstein", "_blank");
+};
+
 const Projects = () => {
   return (
     <section id="projects" className={classes.projectsSection}>
@@ -64,14 +69,14 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className={classes.projectsBottom}>
+      <button onClick={buttonClickHandler}>
         <RoundedRectangle
           top={true}
           title="for additional projects"
           titleIcon={GitHub}
           subtitle="visit my GitHub"
         />
-      </div>
+      </button>
     </section>
   );
 };
