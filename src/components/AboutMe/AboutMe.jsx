@@ -48,13 +48,12 @@ const AboutMe = () => {
         </p>
       </div>
 
-      <button onClick={downloadHandler}>
-        <RoundedRectangle
-          top={true}
-          title="download resume"
-          titleIcon={Download}
-        />
-      </button>
+      <RoundedRectangle
+        onClick={downloadHandler}
+        top={true}
+        title="download resume"
+        titleIcon={Download}
+      />
     </section>
   );
 };

@@ -36,6 +36,7 @@ const TechStack = () => {
   return (
     <section id="techStackSection" className={classes.techStackSection}>
       <div>
+        <h2>my stack</h2>
         <img
           className={classes.techStack}
           src={StackImage}
@@ -43,7 +44,6 @@ const TechStack = () => {
         />
       </div>
 
-      <h2>MY STACK</h2>
       <div className="sectionEdge">
         <div className={classes.roundedRectangle}>
           <div className={classes.container}>

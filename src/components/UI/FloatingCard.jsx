@@ -39,7 +39,6 @@ const FloatingCard = (props) => {
 
     resetName();
     resetMessage();
-
     setPosted(true);
   };
 

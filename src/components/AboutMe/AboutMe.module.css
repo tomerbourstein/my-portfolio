@@ -14,11 +14,6 @@
   padding-bottom: 0.5rem;
 }
 
-.aboutMe button {
-  all: unset;
-  width: 100%;
-  cursor: pointer;
-}
 .slideIn {
   -webkit-transform: translateY(0);
   transform: translateY(0);

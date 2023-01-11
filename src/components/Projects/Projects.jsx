@@ -45,7 +45,6 @@ const myProjects = [
 ];
 
 const buttonClickHandler = (event) => {
-  event.preventDefault();
   window.open("https://github.com/tomerbourstein", "_blank");
 };
 
@@ -69,14 +68,13 @@ const Projects = () => {
         ))}
       </div>
 
-      <button onClick={buttonClickHandler}>
-        <RoundedRectangle
-          top={true}
-          title="for additional projects"
-          titleIcon={GitHub}
-          subtitle="visit my GitHub"
-        />
-      </button>
+      <RoundedRectangle
+        onClick={buttonClickHandler}
+        top={true}
+        title="for additional projects"
+        titleIcon={GitHub}
+        subtitle="visit my GitHub"
+      />
     </section>
   );
 };

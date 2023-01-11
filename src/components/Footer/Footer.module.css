@@ -87,17 +87,31 @@ footer {
 
 .itemHeading {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.footerItemImage img {
+.itemHeading img {
   width: 0.7rem;
   height: 0.7rem;
 }
 .footerItemHeading {
   font-family: "Playfair Display SC", serif;
   font-size: 0.8rem;
+}
+
+.footerItemHeading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid ;
+  transition: border-color .15s ease;
+  border-color: transparent;
+}
+
+.footerItemHeading:hover::after {
+  border-color:#3F72AF;
+
 }
 
 .footerItemText {
