@@ -1,3 +1,4 @@
+import useClickOutside from "../../hooks/useClickOutside";
 import classes from "./Footer.module.css";
 import EmailCloud from "../../assets/icons/email-cloud.png";
 import WhatsappCloud from "../../assets/icons/whatsapp-cloud.png";
@@ -11,27 +12,57 @@ import GithubFooter from "../../assets/icons/github-footer.png";
 import LiknedinFooter from "../../assets/icons/linkedin-footer.png";
 import WhatsappFooter from "../../assets/icons/whatsapp-footer.png";
 import EmailFooter from "../../assets/icons/email-footer.png";
+import FloatingCard from "../UI/FloatingCard";
+import { useState } from "react";
 
 const Footer = () => {
+  const [messageIsOpen, setMessageIsOpen] = useState(false);
+  const [playCloseAnimation, setPlayCloseAnimation] = useState(false);
+
+  const toggleContactMessageHandler = () => {
+    setPlayCloseAnimation(true);
+
+    setTimeout(() => {
+      setMessageIsOpen((prevState) => {
+        if (!prevState) setPlayCloseAnimation(false);
+
+        return !prevState;
+      });
+    }, 190);
+  };
+
   return (
     <footer id="footer" className={classes.footer}>
       <div className="sectionEdge">
         <div className={classes.roundedRectangle}>
           <h2>Get in touch</h2>
-          <div className={classes.icons}>
-            <a href="">
-              <img src={EmailCloud} />
-            </a>
-            <a href="">
-              <img src={WhatsappCloud} />
+          <div className={classes.icons} onClick={toggleContactMessageHandler}>
+            <img src={EmailCloud} alt="Email Contact Icon" />
+            <a
+              href="https://wa.me/00972544498337"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src={WhatsappCloud} alt="WhatsApp Contact Icon" />
             </a>
 
-            <a href="">
-              <img src={LinkedinCloud} />
+            <a
+              href="https://www.linkedin.com/in/tomer-bourstein/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src={LinkedinCloud} alt="LinkedIn Contact Icon" />
             </a>
           </div>
         </div>
       </div>
+
+      {messageIsOpen && (
+        <FloatingCard
+          onClose={toggleContactMessageHandler}
+          playCloseAnimation={playCloseAnimation}
+        />
+      )}
 
       <div className={classes.container}>
         <div className={classes.about}>
