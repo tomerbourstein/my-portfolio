@@ -29,6 +29,7 @@ footer {
 }
 
 .icons {
+  /* position: relative; */
   display: flex;
   gap: 1rem;
 }
@@ -107,4 +108,9 @@ footer {
   padding: 4rem 0 1rem;
   font-family: "Josefin Sans", sans-serif;
   font-size: 0.6rem;
+}
+
+
+.icons img {
+  cursor: pointer;
 }

@@ -4,18 +4,18 @@ import { scrollToId } from "../../utils";
 import classes from "./Navigation.module.css";
 
 const Navigation = () => {
-  const { ref, isMenuOpen, setIsMenuOpen, listItemsShow, setListItemsShow } =
+  const { ref, isOpen, setIsOpen, listItemsShow, setListItemsShow } =
     useClickOutside(false);
   const { pageScrollTop } = useCheckScroll();
 
-  let activeMenu = isMenuOpen ? classes.open : classes.notOpen;
+  let activeMenu = isOpen ? classes.open : classes.notOpen;
   let fade = pageScrollTop ? classes.fadeOut : classes.fadeIn;
   let entranceAnimation = listItemsShow ? classes.slideIn : classes.slideOut;
-  let hamburgerAnimation = isMenuOpen ? classes.clicked : classes.notClicked;
+  let hamburgerAnimation = isOpen ? classes.clicked : classes.notClicked;
 
   const openMenu = () => {
     setListItemsShow((prevStateList) => !prevStateList);
-    setIsMenuOpen((prevStateMenu) => {
+    setIsOpen((prevStateMenu) => {
       return !prevStateMenu;
     });
   };
