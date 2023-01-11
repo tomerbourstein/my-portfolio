@@ -23,12 +23,12 @@ const FloatingCard = (props) => {
     reset: resetMessage,
   } = useInput((value) => value.trim() !== "");
 
+  let formIsInvalid = true;
+  if (nameIsValid && messageIsValid) formIsInvalid = false;
   let disableStyle = formIsInvalid ? classes.disabled : null;
   let animation = props.playCloseAnimation && !posted && classes.notOpen;
   let animationPosted =
     props.playCloseAnimation && posted && classes.notOpenAndPosted;
-  let formIsInvalid = true;
-  if (nameIsValid && messageIsValid) formIsInvalid = false;
 
   const submitHandler = (event) => {
     event.preventDefault();
