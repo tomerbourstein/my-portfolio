@@ -14,8 +14,7 @@ a,
 a::after {
   color: inherit;
   text-decoration: none;
-  font-family: 'Playfair Display SC', serif; 
-
+  font-family: "Playfair Display SC", serif;
 }
 
 .homeButton {
@@ -23,8 +22,124 @@ a::after {
   font-weight: 700;
   font-size: 2rem;
   color: #112d4e;
+  letter-spacing: -5px;
+}
+
+.homeButton span {
+  position: absolute;
+  transition: color 0.5s ease;
+}
+
+.homeButton span:nth-of-type(2) {
+  left: 3.2rem;
+}
+.homeButton span:nth-of-type(3) {
+  left: 4.2rem;
+}
+
+.homeButton:hover span:nth-of-type(1) {
+  animation: logoDance1 0.75s ease infinite;
+}
+.homeButton:hover span:nth-of-type(2) {
+  animation: logoDance2 0.75s ease infinite;
+}
+
+.homeButton:hover span:nth-of-type(3) {
+  animation: logoDance3 0.75s 0.25s ease infinite;
 }
 .menuButtons {
   display: flex;
   gap: 2rem;
+}
+
+/* Underline Effect */
+.menuButtons span {
+  position: relative;
+  color: #3f72af;
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+a div {
+  font-size: 10px;
+  height: 10px;
+  color: #112d4e;
+  position: relative;
+  right: 0;
+  bottom: 2px;
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.menuButtons a:hover > div {
+  opacity: 1;
+}
+.menuButtons span:hover {
+  color: #112d4e;
+}
+.menuButtons span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #112d4e;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.menuButtons span:hover::before {
+  height: 0.5px;
+  transform: scaleX(1);
+}
+
+@keyframes logoDance1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-3px);
+  }
+  66% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoDance2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoDance3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

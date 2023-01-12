@@ -13,3 +13,25 @@
 .aboutText p {
   padding-bottom: 0.5rem;
 }
+
+.aboutMe button {
+  all: unset;
+  width: 100%;
+  cursor: pointer;
+}
+.slideIn {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out,
+    opacity 0.7s ease-in-out;
+  transition-delay: 250ms;
+}
+
+.slideOut {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  opacity: 0.015;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}

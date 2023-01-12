@@ -1,0 +1,193 @@
+.wrapper {
+  position: absolute;
+  display: inline-block;
+  max-width: 700px;
+}
+
+.card {
+  position: absolute;
+  width: 350px;
+  bottom: 7rem;
+  left: -100px;
+  padding: 1rem;
+  z-index: 0;
+  background: #112d4e;
+  outline: 1px solid #bababa;
+  border: 2px solid #f9f7f7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: grow 0.25s ease;
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left: 175px;
+  border-style: solid;
+  border-width: 25px 25px 0;
+  border-color: #f9f7f7 transparent;
+  display: block;
+  width: 0;
+  z-index: 10;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 174px;
+  border-style: solid;
+  border-width: 26px 26px 0;
+  border-color: #112d4e transparent !important;
+  display: block;
+  width: 0;
+  z-index: 20;
+}
+
+.card input,
+textarea,
+button {
+  all: unset;
+  width: 300px;
+  padding: 4px 15px;
+}
+.card input,
+textarea {
+  resize: none;
+  background-color: #f9f7f7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 5px auto;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.card button {
+  background-color: #3f72af;
+  color: #112d4e;
+  outline: 3px solid transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease,
+    outline 0.2s ease-in;
+}
+
+.card button:hover {
+  background-color: #3f71afdf;
+  color: #ffffffb0;
+}
+
+.card button:active,
+button:focus {
+  color: #ffffffb0;
+  outline: 2px solid #f9f7f7;
+}
+
+.disabled {
+  color: #112d4e !important;
+  background-color: #325580 !important;
+  cursor: not-allowed !important;
+}
+
+.disabled:active {
+  outline: none !important;
+}
+
+.closeButton {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+.closeButton span {
+  background-color: #f9f7f7;
+  width: 15px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.closeButton span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.closeButton span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.closeButton:hover span {
+  background-color: #3f72af;
+}
+
+.thankYouForReaching {
+  font-family: "Josefin Sans", sans-serif;
+  color: #f9f7f7;
+  animation: shrink 0.25s ease;
+}
+
+.form {
+  animation: grow 0.25s ease;
+}
+
+.notOpen {
+  animation: close 0.2s ease-in-out;
+}
+
+.notOpenAndPosted {
+  animation: closePosted 0.2s ease-in-out;
+}
+
+@keyframes shrink {
+  from {
+    height: 208px;
+  }
+  to {
+    height: 24px;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+    height: 208px;
+  }
+  to {
+    opacity: 0;
+    height: 150px;
+  }
+}
+
+@keyframes closePosted {
+  from {
+    opacity: 1;
+    height: 24px;
+  }
+  to {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    height: 150px;
+  }
+  to {
+    opacity: 1;
+    height: 208px;
+  }
+}
