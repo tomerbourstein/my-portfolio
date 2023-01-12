@@ -25,12 +25,15 @@
 .projectTitle {
   height: 3rem;
 }
+
 .projectTitle h3 {
   transition: font-size 0.3s ease-in-out;
 }
+
 .projectTitle h3:hover {
   font-size: 1rem;
 }
+
 .projectDetails {
   display: flex;
   flex-direction: column;
@@ -38,11 +41,13 @@
   justify-content: space-between;
   height: 15.5rem;
 }
+
 .projectDetails p {
   margin: 1rem 1.9rem 0rem;
   text-align: justify;
   line-height: 1.5;
 }
+
 .projectDetails button {
   font-family: "Playfair Display", serif !important;
   width: 4.6rem !important;
@@ -65,6 +70,7 @@
   left: auto;
   right: 20rem;
 }
+
 .projectDetails button::after {
   content: "";
   display: block;
@@ -84,9 +90,11 @@
 .projectDetails button:hover::after {
   border-color: transparent;
 }
+
 .projectDetails button:hover::before {
   animation: arrow 1s ease-in-out infinite;
 }
+
 .projectPreview {
   width: 32.25rem;
   margin: 0.5rem 0;
@@ -119,17 +127,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s ease-in-out;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: opacity 0.2s ease-in-out, width 0.2s ease, height 0.2s ease,
+    background-color 0.5s ease, color 0.2s ease, font-size 0.2s ease;
+}
+
+.projectOnHoverButtons a:hover {
+  width: 17.5rem;
+  height: 3.5rem;
+  font-size: 0.9rem;
+  background-color: #112d4e;
+  color: #f9f7f7;
+  border-color: #f9f7f7;
+}
+
+.projectOnHoverButtons img {
+  width: 3.5rem;
+  transition: width 0.2s ease;
+}
+.projectOnHoverButtons a:hover img {
+  width: 3rem;
 }
 
 .projectPreview:hover .projectOnHoverButtons {
   backdrop-filter: grayscale(0.5) blur(5px);
-  /* transition: backdrop-filter 0.2s ; */
 }
 
 .projectPreview:hover .projectOnHoverButtons a {
   opacity: 1;
 }
+
 .kuperman {
   background-image: url("../../assets/kuperman-preview.png");
 }

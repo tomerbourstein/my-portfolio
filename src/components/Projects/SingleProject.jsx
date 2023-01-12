@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Pointer from "../../assets/icons/pointer.png";
 import classes from "./SingleProject.module.css";
 const SingleProject = (props) => {
   const { title, details, image, style, reverse, repo, app } = props;
@@ -20,6 +21,7 @@ const SingleProject = (props) => {
           <div className={`${classes.projectPreview} ${classes[style]}`}>
             <div className={classes.projectOnHoverButtons}>
               <a href={app} target="_blank" rel="noreferrer noopener">
+                <img src={Pointer} alt="Visit App Icon" />
                 check out the application
               </a>
             </div>
@@ -30,6 +32,7 @@ const SingleProject = (props) => {
           <div className={`${classes.projectPreview} ${classes[style]}`}>
             <div className={classes.projectOnHoverButtons}>
               <a href={app} target="_blank" rel="noreferrer noopener">
+              <img src={Pointer} alt="Visit App Icon" />
                 check out the application
               </a>
             </div>
