@@ -8,11 +8,13 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const queryParams = document.location.search
+  const queryParam = queryParams.match(/\?q=([\w+|+]+)/)
   return (
     <div className="App">
       <Navigation />
       <Header />
-      <HeyThere />
+      <HeyThere companyName={queryParam? queryParam[1]:null}/>
       <TechStack />
       <AboutMe />
       <Projects />
