@@ -53,6 +53,7 @@ const AboutMe = () => {
         top={true}
         title="download resume"
         titleIcon={Download}
+        hover={true}
       />
     </section>
   );

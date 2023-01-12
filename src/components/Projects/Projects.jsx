@@ -84,6 +84,7 @@ const Projects = () => {
         title="for additional projects"
         titleIcon={GitHub}
         subtitle="visit my GitHub"
+        hover={true}
       />
     </section>
   );

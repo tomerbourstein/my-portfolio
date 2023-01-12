@@ -31,6 +31,10 @@
   gap: 3.5rem;
 }
 
+.mainContent h2 {
+  transition: transform 0.2s ease;
+}
+
 .subContent {
   display: flex;
   flex-direction: column;
@@ -42,8 +46,17 @@
 .subContent span {
   font-size: 1.3rem;
   letter-spacing: 12px;
+  transition: transform 0.2s ease;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.buttonAnimation:hover h2 {
+  transform: translateX(2px);
+}
+
+.buttonAnimation:hover .subContent span {
+  transform: translatex(2px);
 }
