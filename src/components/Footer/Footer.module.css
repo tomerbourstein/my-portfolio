@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .roundedRectangle h2 {
   font-size: 2rem;
   letter-spacing: 0;
@@ -23,15 +24,27 @@
   width: 4rem;
 }
 
-footer {
-  background-color: #112d4e;
-  letter-spacing: 0.5px;
-}
-
 .icons {
   /* position: relative; */
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+}
+
+.icons img {
+  cursor: pointer;
+  transition: width 0.2s ease;
+}
+
+.icons a:hover img,
+.icons a {
+  width: 3.7rem;
+}
+
+footer {
+  background-color: #112d4e;
+  letter-spacing: 0.5px;
 }
 
 .container {
@@ -47,17 +60,20 @@ footer {
   width: 16.666rem;
   line-height: 1.6;
 }
+
 .heading {
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .heading img {
   padding: 0.5rem 0;
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .avatar {
   margin: 0;
   padding: 0 !important;
@@ -87,17 +103,31 @@ footer {
 
 .itemHeading {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.footerItemImage img {
+.itemHeading img {
   width: 0.7rem;
   height: 0.7rem;
 }
+
 .footerItemHeading {
   font-family: "Playfair Display SC", serif;
   font-size: 0.8rem;
+}
+
+.footerItemHeading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid;
+  transition: border-color 0.15s ease;
+  border-color: transparent;
+}
+
+.footerItemHeading:hover::after {
+  border-color: #3f72af;
 }
 
 .footerItemText {

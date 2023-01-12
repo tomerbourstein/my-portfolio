@@ -1,4 +1,5 @@
-import useClickOutside from "../../hooks/useClickOutside";
+import { useState } from "react";
+
 import classes from "./Footer.module.css";
 import EmailCloud from "../../assets/icons/email-cloud.png";
 import WhatsappCloud from "../../assets/icons/whatsapp-cloud.png";
@@ -13,12 +14,10 @@ import LiknedinFooter from "../../assets/icons/linkedin-footer.png";
 import WhatsappFooter from "../../assets/icons/whatsapp-footer.png";
 import EmailFooter from "../../assets/icons/email-footer.png";
 import FloatingCard from "../UI/FloatingCard";
-import { useState } from "react";
 
 const Footer = () => {
   const [messageIsOpen, setMessageIsOpen] = useState(false);
   const [playCloseAnimation, setPlayCloseAnimation] = useState(false);
-
   const toggleContactMessageHandler = () => {
     setPlayCloseAnimation(true);
 
@@ -31,28 +30,95 @@ const Footer = () => {
     }, 190);
   };
 
+  const getInTouch = [
+    {
+      title: "Email Contact",
+      icon: EmailCloud,
+      url: null,
+      onClick: toggleContactMessageHandler,
+    },
+    {
+      title: "WhatsApp Contact",
+      icon: WhatsappCloud,
+      url: "https://wa.me/00972544498337",
+      onClick: null,
+    },
+    {
+      title: "LinkedIn Contact",
+      icon: LinkedinCloud,
+      url: "https://www.linkedin.com/in/tomer-bourstein/",
+      onClick: null,
+    },
+  ];
+
+  const projects = [
+    {
+      title: "The Witcher",
+      content:
+        "A single page typing contest with “The Witcher” theme built with React.JS.",
+      icon: BulletFooter,
+      url: "https://github.com/tomerbourstein/the-witcher",
+    },
+    {
+      title: "Cocktails Menu",
+      content:
+        "A single page based on different user's preferences, favorites and custom cocktails built with React.JS.",
+      icon: BulletFooter,
+      url: "https://github.com/tomerbourstein/cocktail-menu-app",
+    },
+    {
+      title: "Multiplayer Quiz",
+      content:
+        "A single page multiplayer online trivia quiz game built with React.JS.",
+      icon: BulletFooter,
+      url: "https://github.com/tomerbourstein/quiz-game",
+    },
+  ];
+
+  const socials = [
+    {
+      title: "LinkedIn",
+      content: "Let's connect on LinkedIn",
+      icon: LiknedinFooter,
+      url: "https://www.linkedin.com/in/tomer-bourstein/",
+    },
+    {
+      title: "GitHub",
+      content: "Follow for open-source projects",
+      icon: GithubFooter,
+      url: "https://github.com/tomerbourstein",
+    },
+    {
+      title: "WhatsApp",
+      content: "Available for quick chat",
+      icon: WhatsappFooter,
+      url: "https://wa.me/00972544498337",
+    },
+    {
+      title: "Email",
+      content: "Can contact me via tomer.bourstein@gmail.com",
+      icon: EmailFooter,
+      url: "tomer.bourstein@gmail.com",
+    },
+  ];
+
   return (
     <footer id="footer" className={classes.footer}>
       <div className="sectionEdge">
         <div className={classes.roundedRectangle}>
           <h2>Get in touch</h2>
-          <div className={classes.icons} onClick={toggleContactMessageHandler}>
-            <img src={EmailCloud} alt="Email Contact Icon" />
-            <a
-              href="https://wa.me/00972544498337"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img src={WhatsappCloud} alt="WhatsApp Contact Icon" />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/tomer-bourstein/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img src={LinkedinCloud} alt="LinkedIn Contact Icon" />
-            </a>
+          <div className={classes.icons}>
+            {getInTouch.map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                onClick={item.onClick}
+              >
+                <img src={item.icon} alt={item.title} />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -75,12 +141,13 @@ const Footer = () => {
             <h4>about</h4>
           </div>
           <span>
-            Self-taught JavaScript enthusiast with quick learning abilities,
+            A self-taught JavaScript enthusiast with quick learning abilities,
             diligent, ambitious and highly motivated. I enjoy creating web
             applications with React and know my way around with essential
             JavaScript libraries
           </span>
         </div>
+
         <div className={classes.projectsAndContact}>
           <div className={classes.projects}>
             <div className={classes.heading}>
@@ -88,103 +155,46 @@ const Footer = () => {
               <h4>projects</h4>
             </div>
 
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={BulletFooter} alt="Bullet Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>The Witcher</span>
+            {projects.map((item, index) => (
+              <div key={index} className={classes.footerItem}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={classes.itemHeading}
+                >
+                  <img src={item.icon} alt={item.icon} />
+                  <span className={classes.footerItemHeading}>
+                    {item.title}
+                  </span>
+                </a>
+                <div className={classes.footerItemText}>{item.content}</div>
               </div>
-              <div className={classes.footerItemText}>
-                A single page typing contest with “The Witcher” theme built with
-                React.JS.
-              </div>
-            </div>
-
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={BulletFooter} alt="Bullet Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>
-                  Multiplayer Quiz
-                </span>
-              </div>
-              <div className={classes.footerItemText}>
-                A single page multiplayer online trivia quiz game built with
-                React.JS.
-              </div>
-            </div>
-
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={BulletFooter} alt="Bullet Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>
-                  Cocktails Menu
-                </span>
-              </div>
-              <div className={classes.footerItemText}>
-                A single page based on different user's preferences, favorites
-                and custom cocktails built with React.JS.
-              </div>
-            </div>
+            ))}
           </div>
+
           <div className={classes.socials}>
             <div className={classes.heading}>
               <img src={SocialsCategory} alt="Socials Icon" />
-
               <h4>socials</h4>
             </div>
 
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={LiknedinFooter} alt="LinkedIn Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>LinkedIn</span>
+            {socials.map((item, index) => (
+              <div key={index} className={classes.footerItem}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={classes.itemHeading}
+                >
+                  <img src={item.icon} alt={item.icon} />
+                  <span className={classes.footerItemHeading}>
+                    {item.title}
+                  </span>
+                </a>
+                <div className={classes.footerItemText}>{item.content} </div>
               </div>
-              <div className={classes.footerItemText}>
-                Let's connect on LinkedIn
-              </div>
-            </div>
-
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={GithubFooter} alt="GitHub Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>GitHub</span>
-              </div>
-              <div className={classes.footerItemText}>
-                Follow for open-source projects
-              </div>
-            </div>
-
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={WhatsappFooter} alt="WhatsApp Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>WhatsApp</span>
-              </div>
-              <div className={classes.footerItemText}>
-                Available for quick chat
-              </div>
-            </div>
-
-            <div className={classes.footerItem}>
-              <div className={classes.itemHeading}>
-                <span className={classes.footerItemImage}>
-                  <img src={EmailFooter} alt="Email Icon" />
-                </span>
-                <span className={classes.footerItemHeading}>email</span>
-              </div>
-              <div className={classes.footerItemText}>
-                Can contact me via Email
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

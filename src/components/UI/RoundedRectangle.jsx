@@ -1,15 +1,20 @@
 import classes from "./RoundedRectangle.module.css";
 
 const RoundedRectangle = (props) => {
-  const { top, title, titleIcon, subtitle, subIcon } = props;
+  const { top, title, titleIcon, subtitle, subIcon, onClick, hover } = props;
 
   const style = top
     ? classes.roundedRectanglePlaceTop
     : classes.roundedRectanglePlaceBottom;
+  const buttonStyle = onClick ? classes.pointer : null;
+  const buttonAnimation = hover ? classes.buttonAnimation : null;
   return (
     <div className="sectionEdge">
-      <div className={`${classes.roundedRectangle} ${style}`}>
-        <div className={classes.mainContent}>
+      <div
+        className={`${classes.roundedRectangle} ${style} ${buttonStyle}`}
+        onClick={() => onClick()}
+      >
+        <div className={`${classes.mainContent} ${buttonAnimation}`}>
           {titleIcon ? (
             <span>
               <img src={titleIcon} alt={titleIcon} />

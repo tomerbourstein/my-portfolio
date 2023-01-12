@@ -1,11 +1,26 @@
 import classes from "./AboutMe.module.css";
 import useCheckScroll from "../../hooks/useCheckScroll";
+import useCheckScroll from "../../hooks/useCheckScroll";
 import RoundedRectangle from "../UI/RoundedRectangle";
 
 import About from "../../assets/icons/about.png";
 import Download from "../../assets/icons/download.png";
-import cv from "../../../public/files/tb-cv-dec-22.pdf";
+import cv from "../../../public/files/tb-cv-dec-22.pdf";import cv from "../../../public/files/tb-cv-dec-22.pdf";
 const AboutMe = () => {
+  const { firstP, secondP, thirdP } = useCheckScroll(false);
+  let playAnimationFirst = firstP ? classes.slideIn : classes.slideOut;
+  let playAnimationSecond = secondP ? classes.slideIn : classes.slideOut;
+  let playAnimationThird = thirdP ? classes.slideIn : classes.slideOut;
+
+  const downloadHandler = () => {
+    var link = document.createElement("a");
+    link.href = cv;
+    link.download = "Tomer-2023.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const { firstP, secondP, thirdP } = useCheckScroll(false);
   let playAnimationFirst = firstP ? classes.slideIn : classes.slideOut;
   let playAnimationSecond = secondP ? classes.slideIn : classes.slideOut;
@@ -24,8 +39,8 @@ const AboutMe = () => {
     <section id="AboutMe" className={classes.aboutMe}>
       <RoundedRectangle top={false} title="more about me " titleIcon={About} />
 
-      <div className={`${classes.aboutText} `}>
-        <p className={`${playAnimationFirst}`}>
+      <div className={`${`${classes.aboutText} `} `}>
+        <p className={`${playAnimationFirst}`} className={`${playAnimationFirst}`}>
           I always had a soft spot for web development, at the age of 11, I
           started building webpages in HTML.{"\n"}
           It didn't work out as a child and I became an Audio Engineer
@@ -39,7 +54,7 @@ const AboutMe = () => {
           essential JavaScript libraries
         </p>
 
-        <p className={`${playAnimationThird}`}>
+        <p className={`${playAnimationThird}`} className={`${playAnimationThird}`}>
           At my spare time I love watching Maccabi Haifa and Liverpool FC play,
           I love music and concerts, I love wine, cocktails and to have my
           friends over for a drink,{"\n"}I love fantasy stories such as Game of
@@ -48,13 +63,13 @@ const AboutMe = () => {
         </p>
       </div>
 
-      <button onClick={downloadHandler}>
-        <RoundedRectangle
-          top={true}
-          title="download resume"
-          titleIcon={Download}
-        />
-      </button>
+      <RoundedRectangle
+        onClick={downloadHandler}
+        top={true}
+        title="download resume"
+        titleIcon={Download}
+        hover={true}
+      />
     </section>
   );
 };

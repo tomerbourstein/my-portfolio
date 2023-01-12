@@ -79,14 +79,14 @@ export default function useCheckScroll(initialScroll) {
     if (scroll < 50) dispatch({ type: "TOP" });
     if (scroll > 50) dispatch({ type: "NOT_TOP" });
 
-    if (scroll > 1150) dispatch({ type: "FIRST" });
-    if (scroll > 1650 || scroll < 1150) dispatch({ type: "FIRST_EXIT" });
+    if (scroll > 1210) dispatch({ type: "FIRST" });
+    if (scroll > 1850 || scroll < 1210) dispatch({ type: "FIRST_EXIT" });
 
-    if (scroll > 1350) dispatch({ type: "SECOND" });
-    if (scroll > 1800 || scroll < 1350) dispatch({ type: "SECOND_EXIT" });
+    if (scroll > 1410) dispatch({ type: "SECOND" });
+    if (scroll > 1960 || scroll < 1410) dispatch({ type: "SECOND_EXIT" });
 
-    if (scroll > 1500) dispatch({ type: "THIRD" });
-    if (scroll > 1950 || scroll < 1500) dispatch({ type: "THIRD_EXIT" });
+    if (scroll > 1560) dispatch({ type: "THIRD" });
+    if (scroll > 2110 || scroll < 1560) dispatch({ type: "THIRD_EXIT" });
   };
 
   useEffect(() => {
