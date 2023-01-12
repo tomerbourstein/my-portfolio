@@ -1,16 +1,19 @@
 import { scrollToId } from "../../utils";
 
 import classes from "./Header.module.css";
-const sourceCode = `</>`;
 const openTag = `< `;
-const closingTag = ` />`;
+const slash = `/`;
+const closingTag = `>`;
+const closingTagAndSlash = ` />`;
 const Header = () => {
   return (
     <header id="header">
       <div className={classes.container}>
         <div>
           <a href="/" className={classes.homeButton}>
-            <span> {sourceCode} </span>
+            <span>{openTag} </span>
+            <span> {slash} </span>
+            <span> {closingTag} </span>
           </a>
         </div>
 
@@ -21,25 +24,25 @@ const Header = () => {
           >
             <div>{openTag} </div>
             <span>Stack</span>
-            <div>{closingTag}</div>
+            <div>{closingTagAndSlash}</div>
           </a>
           <a href="/" onClick={(event) => scrollToId(event, "AboutMe")}>
             <div>{openTag} </div>
 
             <span>About</span>
-            <div>{closingTag}</div>
+            <div>{closingTagAndSlash}</div>
           </a>
           <a href="/" onClick={(event) => scrollToId(event, "projects")}>
             <div>{openTag} </div>
 
             <span>Projects</span>
-            <div>{closingTag}</div>
+            <div>{closingTagAndSlash}</div>
           </a>
           <a href="/" onClick={(event) => scrollToId(event, "footer")}>
             <div>{openTag} </div>
 
             <span>Contact</span>
-            <div>{closingTag}</div>
+            <div>{closingTagAndSlash}</div>
           </a>
         </div>
       </div>
