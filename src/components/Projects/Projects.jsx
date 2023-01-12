@@ -17,6 +17,8 @@ const myProjects = [
     image: Kuperman,
     style: "kuperman",
     reverse: false,
+    repo: "https://github.com/tomerbourstein/food-app",
+    app: "https://tomerbourstein.github.io/food-app/",
   },
   {
     title: "Cocktails Menu",
@@ -25,6 +27,8 @@ const myProjects = [
     image: Cocktails,
     style: "cocktails",
     reverse: true,
+    repo: "https://github.com/tomerbourstein/cocktail-menu-app",
+    app: "https://tomerbourstein.github.io/cocktail-menu-app/",
   },
   {
     title: "The Witcher Typing",
@@ -33,6 +37,8 @@ const myProjects = [
     image: Witcher,
     style: "witcher",
     reverse: false,
+    repo: "https://github.com/tomerbourstein/the-witcher",
+    app: "https://tomerbourstein.github.io/the-witcher/",
   },
   {
     title: "Multiplayer Quiz",
@@ -41,6 +47,8 @@ const myProjects = [
     image: Quiz,
     style: "quiz",
     reverse: true,
+    repo: "https://github.com/tomerbourstein/quiz-game",
+    app: "https://tomerbourstein.github.io/quiz-game/",
   },
 ];
 
@@ -64,6 +72,8 @@ const Projects = () => {
             details={project.details}
             style={project.style}
             reverse={project.reverse}
+            repo={project.repo}
+            app={project.app}
           />
         ))}
       </div>
