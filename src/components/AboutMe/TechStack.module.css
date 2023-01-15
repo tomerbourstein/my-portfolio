@@ -81,3 +81,10 @@
     width: 2.7rem;
   }
 }
+
+@media only screen and (max-width: 431px) {
+  .container,
+  .roundedRectangle {
+    width: 15rem;
+  }
+}

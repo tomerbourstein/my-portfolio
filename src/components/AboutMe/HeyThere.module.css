@@ -60,3 +60,15 @@
     gap: 1.5rem;
   }
 }
+
+@media only screen and (max-width: 431px) {
+  h1 {
+    line-height: 1;
+    font-size: 2.6rem !important;
+  }
+
+  .heyThere {
+    width: 21rem;
+    margin: 0 auto inherit;
+  }
+}

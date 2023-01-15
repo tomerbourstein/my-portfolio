@@ -153,3 +153,9 @@ a div {
     gap: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 431px) {
+  .menuButtons {
+    display: none;
+  }
+}
