@@ -1,7 +1,7 @@
 .container {
   margin: 3rem auto;
   width: 50rem;
-  height: 20rem;
+  max-height: 30rem;
   background-color: #dbe2ef;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   display: flex;
@@ -175,6 +175,10 @@
   background-image: url("../../assets/quiz-game-preview.png");
 }
 
+.displaySmallScreen {
+  display: none;
+}
+
 @keyframes arrow {
   0% {
     transform: translateX(0);
@@ -184,5 +188,51 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    width: 30rem;
+    max-height: 30rem;
+    margin: 0 auto 2rem;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .projectContent {
+    width: 100%;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .projectTitle {
+    width: 100%;
+    height: 3rem;
+    margin: 0 auto;
+  }
+
+  .projectDetails {
+    height: 10rem;
+    gap: 0.5rem;
+  }
+
+  .projectPreview {
+    width: 100%;
+    height: 15rem;
+    box-sizing: border-box;
+  }
+
+  .projectOnHoverButtons {
+    width: 100%;
+  }
+  .displaySmallScreen {
+    display: inherit;
+  }
+
+  .displayLargeScreen {
+    display: none;
   }
 }

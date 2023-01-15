@@ -143,3 +143,13 @@ a div {
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .container {
+    padding-right: 3rem;
+  }
+
+  .menuButtons {
+    gap: 0.5rem;
+  }
+}

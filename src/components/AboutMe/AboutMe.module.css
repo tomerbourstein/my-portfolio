@@ -35,3 +35,9 @@
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out,
     opacity 0.2s ease-in-out;
 }
+
+@media only screen and (max-width: 769px) {
+  .aboutText {
+    width: 30rem;
+  }
+}

@@ -71,3 +71,13 @@
     left: 100%;
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .container,
+  .roundedRectangle {
+    width: 30rem;
+  }
+  .icon {
+    width: 2.7rem;
+  }
+}
