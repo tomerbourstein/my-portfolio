@@ -10,7 +10,7 @@ const Header = () => {
     <header id="header">
       <div className={classes.container}>
         <div>
-          <a href="/" className={classes.homeButton}>
+          <a  className={classes.homeButton}>
             <span>{openTag} </span>
             <span> {slash} </span>
             <span> {closingTag} </span>

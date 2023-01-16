@@ -9,8 +9,8 @@ const HeyThere = ({companyName}) => {
         <p>Hey {companyName? capitalize(companyName) : 'there'}, I'm Tomer, a self-taught JavaScript enthusiast</p>
         <p>I enjoy creating web apps with React</p>
       </div>
-      <div>
-        <img src={Avatar} alt="Tomer Bourstein Avatar" />
+      <div className={classes.avatar}>
+        <img  src={Avatar} alt="Tomer Bourstein Avatar" />
         <div className={classes.shadow}></div>
       </div>
       <span>keep scrolling</span>
