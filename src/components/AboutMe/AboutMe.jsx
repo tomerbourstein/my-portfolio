@@ -3,8 +3,7 @@ import useCheckScroll from "../../hooks/useCheckScroll";
 import RoundedRectangle from "../UI/RoundedRectangle";
 import About from "../../assets/icons/about.png";
 import Download from "../../assets/icons/download.png";
-import cv from "../../../public/files/tb-cv-dec-22.pdf";
-
+import cv from "../../assets/files/tb-cv-dec-22.pdf";
 const AboutMe = () => {
   const { firstP, secondP, thirdP } = useCheckScroll(false);
   let playAnimationFirst = firstP ? classes.slideIn : classes.slideOut;
@@ -46,7 +45,9 @@ const AboutMe = () => {
   );
 
   const contentSmallScreen = (
-    <div className={`${`${classes.aboutText} `} ${classes.contentSmallScreen} `}>
+    <div
+      className={`${`${classes.aboutText} `} ${classes.contentSmallScreen} `}
+    >
       <p>
         I always had a soft spot for web development, at the age of 11, I
         started building webpages in HTML.{"\n"}

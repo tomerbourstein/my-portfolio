@@ -235,4 +235,87 @@
   .displayLargeScreen {
     display: none;
   }
+
+  .projectOnHoverButtonsMobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 431px) {
+  .container {
+    width: 18rem;
+    max-height: 40rem;
+  }
+
+  .projectDetails {
+    height: 100%;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .projectPreview {
+    background-size: cover;
+    background-position: top;
+  }
+
+  .projectDetails {
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .projectOnHoverButtons {
+    display: none;
+    align-items: flex-end;
+  }
+
+  .projectOnHoverButtonsMobile {
+    display: inherit;
+  }
+
+  .projectOnHoverButtons a {
+    margin-bottom: 0;
+    opacity: 1;
+    width: 10rem;
+    height: 1.5rem;
+    color: #3f72af;
+    border-color: #f9f7f7;
+    box-shadow: #dbe2ef 0px 1px 3px 0px, #dbe2ef 0px 0px 0px 1px;
+  }
+
+  .projectOnHoverButtons a:hover {
+    width: 10rem;
+    height: 1.5rem;
+  }
+
+  .projectOnHoverButtons img {
+    width: 2rem;
+  }
+
+  .projectOnHoverButtons a:hover img {
+    width: 2rem;
+  }
+
+  .repositoryButton {
+    display: none;
+  }
+
+  .projectPreview:hover .projectOnHoverButtons {
+    backdrop-filter: unset;
+  }
+
+  .kuperman {
+    background-image: url("../../assets/kuperman-preview-mobile.jpg");
+  }
+
+  .cocktails {
+    background-image: url("../../assets/cocktails-preview-mobile.jpg");
+  }
+
+  .witcher {
+    background-image: url("../../assets/witcher-preview-mobile.jpg");
+  }
+
+  .quiz {
+    background-image: url("../../assets/quiz-preview-mobile.jpg");
+  }
 }

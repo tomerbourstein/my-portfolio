@@ -36,9 +36,25 @@ const SingleProject = (props) => {
         </div>
         <div className={classes.projectDetails}>
           <p>{details}</p>
-          <a href={repo} target="_blank" rel="noreferrer noopener">
-            <button>repository</button>
-          </a>
+          <div className={classes.repositoryButton}>
+            <a href={repo} target="_blank" rel="noreferrer noopener">
+              <button>repository</button>
+            </a>
+          </div>
+          <div
+            className={`${classes.projectOnHoverButtons} ${classes.projectOnHoverButtonsMobile}`}
+          >
+            <a href={repo} target="_blank" rel="noreferrer noopener">
+              repository
+            </a>
+          </div>
+          <div
+            className={`${classes.projectOnHoverButtons} ${classes.projectOnHoverButtonsMobile}`}
+          >
+            <a href={app} target="_blank" rel="noreferrer noopener">
+              application
+            </a>
+          </div>
         </div>
       </div>
       <div className={`${classes.projectPreview} ${classes[style]}`}>

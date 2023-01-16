@@ -31,7 +31,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-width: 400px;
 }
 h1,
 h2 {
@@ -40,7 +39,7 @@ h2 {
   margin: 0;
 }
 h1 {
-  text-shadow: 0 .5px 0 rgb(255, 255, 255), 0 1px 0 #3F72AF;
+  text-shadow: 0 0.5px 0 rgb(255, 255, 255), 0 1px 0 #3f72af;
 }
 h2 {
   font-size: 1.3rem;
