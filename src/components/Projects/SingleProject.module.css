@@ -41,7 +41,13 @@
   justify-content: space-between;
   height: 15.5rem;
 }
-
+.projectDetails a {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 .projectDetails p {
   margin: 1rem 1.9rem 0rem;
   text-align: justify;
@@ -51,24 +57,14 @@
 .projectDetails button {
   font-family: "Playfair Display", serif !important;
   width: 4.6rem !important;
-  margin-bottom: 1rem !important;
   transition: color 0.5s ease;
 }
 
-.projectDetails button::before {
-  content: "";
-  display: inline-block;
+.projectDetails span {
   background-color: transparent;
-  position: absolute;
-  left: 12rem;
   border-left: 14px solid #3f72af;
   border-top: 14px solid transparent;
   border-bottom: 14px solid transparent;
-}
-
-.projectDetailsRight button::before {
-  left: auto;
-  right: 20rem;
 }
 
 .projectDetails button::after {
@@ -91,7 +87,7 @@
   border-color: transparent;
 }
 
-.projectDetails button:hover::before {
+.projectDetails a:hover > span {
   animation: arrow 1s ease-in-out infinite;
 }
 

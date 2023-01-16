@@ -13,7 +13,7 @@ const SingleProject = (props) => {
         <div className={classes.projectDetails}>
           <p>{details}</p>
           <a href={repo} target="_blank" rel="noreferrer noopener">
-            <button>repository</button>
+            <span></span> <button>repository</button>
           </a>
         </div>
       </div>
@@ -38,7 +38,7 @@ const SingleProject = (props) => {
           <p>{details}</p>
           <div className={classes.repositoryButton}>
             <a href={repo} target="_blank" rel="noreferrer noopener">
-              <button>repository</button>
+              <span></span> <button>repository</button>
             </a>
           </div>
           <div
@@ -82,12 +82,10 @@ const SingleProject = (props) => {
         <div className={classes.projectTitle}>
           <h3>{title}</h3>
         </div>
-        <div
-          className={`${classes.projectDetails} ${classes.projectDetailsRight}`}
-        >
+        <div className={classes.projectDetails}>
           <p>{details}</p>
           <a href={repo} target="_blank" rel="noreferrer noopener">
-            <button>repository</button>
+            <span></span> <button>repository</button>
           </a>
         </div>
       </div>

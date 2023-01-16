@@ -3,7 +3,8 @@ import useCheckScroll from "../../hooks/useCheckScroll";
 import RoundedRectangle from "../UI/RoundedRectangle";
 import About from "../../assets/icons/about.png";
 import Download from "../../assets/icons/download.png";
-import cv from "../../assets/files/tb-cv-dec-22.pdf";
+import cv from "../../assets/files/tb-cv-jan-23.pdf";
+
 const AboutMe = () => {
   const { firstP, secondP, thirdP } = useCheckScroll(false);
   let playAnimationFirst = firstP ? classes.slideIn : classes.slideOut;
