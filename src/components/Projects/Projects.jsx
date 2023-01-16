@@ -11,14 +11,14 @@ import ProjectsIcon from "../../assets/icons/projects.png";
 
 const myProjects = [
   {
-    title: "Kuperman Cookies",
+    title: "Multiplayer Quiz",
     details:
-      "An e-Commerce single page for purchasing cookies built with React.JS. \n Using React Bootstrap and CSS 3 for design, and Google Firebase for database control.",
-    image: Kuperman,
-    style: "kuperman",
+      "A single page multiplayer online trivia quiz game built with React.JS.\n Using Material-UI and CSS 3 for design, and Google Firebase for database and authentication control.",
+    image: Quiz,
+    style: "quiz",
     reverse: false,
-    repo: "https://github.com/tomerbourstein/food-app",
-    app: "https://tomerbourstein.github.io/food-app/",
+    repo: "https://github.com/tomerbourstein/quiz-game",
+    app: "https://tomerbourstein.github.io/quiz-game/",
   },
   {
     title: "Cocktails Menu",
@@ -31,24 +31,24 @@ const myProjects = [
     app: "https://tomerbourstein.github.io/cocktail-menu-app/",
   },
   {
+    title: "Kuperman Cookies",
+    details:
+      "An e-Commerce single page for purchasing cookies built with React.JS. \n Using React Bootstrap and CSS 3 for design, and Google Firebase for database control.",
+    image: Kuperman,
+    style: "kuperman",
+    reverse: false,
+    repo: "https://github.com/tomerbourstein/food-app",
+    app: "https://tomerbourstein.github.io/food-app/",
+  },
+  {
     title: "The Witcher Typing",
     details:
       "A single page typing contest with “The Witcher” theme built with React.JS. \n Using CSS 3 for design.",
     image: Witcher,
     style: "witcher",
-    reverse: false,
+    reverse: true,
     repo: "https://github.com/tomerbourstein/the-witcher",
     app: "https://tomerbourstein.github.io/the-witcher/",
-  },
-  {
-    title: "Multiplayer Quiz",
-    details:
-      "A single page multiplayer online trivia quiz game built with React.JS.\n Using Material-UI and CSS 3 for design, and Google Firebase for database and authentication control.",
-    image: Quiz,
-    style: "quiz",
-    reverse: true,
-    repo: "https://github.com/tomerbourstein/quiz-game",
-    app: "https://tomerbourstein.github.io/quiz-game/",
   },
 ];
 
