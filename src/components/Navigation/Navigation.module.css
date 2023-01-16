@@ -134,6 +134,7 @@
   opacity: 0;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out,
     opacity 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 /* Underline Effect */
@@ -166,31 +167,29 @@
   transform: scaleX(1);
 }
 
-/* .menuButtons span {
-  position: relative;
-  overflow: hidden;
-}
+@media only screen and (max-width: 431px) {
+  .fadeOut {
+    -webkit-transform: none;
+    transform: none;
+    transition: none;
+    pointer-events: inherit;
+  }
 
-.menuButtons span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0px;
-  width: 100%;
-  height: .5px;
-  background-color: #f9f7f7;
-  opacity: 0;
-  transition: opacity .3s, transform .3s;
+  .collapsable {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+  }
+  .open {
+    width: 300px;
+    height: 300px;
+  }
+  .hamburger {
+    right: 1rem;
+    top: 1rem;
+  }
+  .menuButtons {
+    right: 3rem;
+    top: 1rem;
+  }
 }
-
-.menuButtons span::after {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0);
-}
-
-.menuButtons span:hover::after,
-.menuButtons span:focus::after {
-  opacity: 1;
-  height: .5px;
-  transform: translate3d(0, 0, 0);
-} */

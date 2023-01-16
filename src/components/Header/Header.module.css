@@ -30,23 +30,34 @@ a::after {
   transition: color 0.5s ease;
 }
 
-.homeButton span:nth-of-type(2) {
-  left: 3.2rem;
-}
-.homeButton span:nth-of-type(3) {
-  left: 4.2rem;
+/* page reload animation */
+.homeButton span:nth-of-type(1) {
+  animation: logoDanceIntro1 0.75s 0.5s ease;
 }
 
-.homeButton:hover span:nth-of-type(1) {
-  animation: logoDance1 0.75s ease infinite;
+.homeButton span:nth-of-type(2) {
+  left: 3.2rem;
+  animation: logoDanceIntro2 0.75s 0.5s ease;
 }
+
+.homeButton span:nth-of-type(3) {
+  left: 4.2rem;
+  animation: logoDanceIntro3 0.75s 0.75s ease;
+}
+
+/* hover animation */
+.homeButton:hover span:nth-of-type(1) {
+  animation: logoDance1 0.75s ease;
+}
+
 .homeButton:hover span:nth-of-type(2) {
-  animation: logoDance2 0.75s ease infinite;
+  animation: logoDance2 0.75s ease;
 }
 
 .homeButton:hover span:nth-of-type(3) {
-  animation: logoDance3 0.75s 0.25s ease infinite;
+  animation: logoDance3 0.75s 0.25s ease;
 }
+
 .menuButtons {
   display: flex;
   gap: 2rem;
@@ -141,5 +152,69 @@ a div {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes logoDanceIntro1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-3px);
+  }
+  66% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoDanceIntro2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoDanceIntro3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    padding-right: 3rem;
+  }
+
+  .menuButtons {
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 431px) {
+  .menuButtons {
+    display: none;
   }
 }

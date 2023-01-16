@@ -71,3 +71,49 @@
     left: 100%;
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .container,
+  .roundedRectangle {
+    width: 30rem;
+  }
+
+  .icon {
+    width: 2.7rem;
+  }
+}
+
+@media only screen and (max-width: 431px) {
+  .container,
+  .roundedRectangle {
+    width: 15rem;
+  }
+
+  .iconBoxRight {
+    animation: run 30s linear infinite;
+  }
+
+  .iconBoxLeft {
+    left: -200%;
+    animation: run2 30s linear 15s infinite;
+  }
+
+  @keyframes run {
+    0% {
+      transform: translateX(-200%);
+    }
+
+    100% {
+      transform: translateX(190%);
+    }
+  }
+
+  @keyframes run2 {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: 190%;
+    }
+  }
+}

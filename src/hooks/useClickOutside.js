@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 export default function useClickOutside(initialIsOpen) {
   const [isOpen, setIsOpen] = useState(initialIsOpen);
   const [listItemsShow, setListItemsShow] = useState(false);
-  // const [messageIsOpen, setMessageIsOpen] = useState(false);
 
   const ref = useRef(null);
   const handleClickOutside = (event) => {
@@ -26,7 +25,5 @@ export default function useClickOutside(initialIsOpen) {
     setIsOpen,
     listItemsShow,
     setListItemsShow,
-    // messageIsOpen,
-    // setMessageIsOpen,
   };
 }

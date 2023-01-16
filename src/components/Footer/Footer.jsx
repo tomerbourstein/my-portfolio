@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useCollapse from "../../hooks/useCollapse";
 
 import classes from "./Footer.module.css";
 import EmailCloud from "../../assets/icons/email-cloud.png";
@@ -18,6 +19,19 @@ import FloatingCard from "../UI/FloatingCard";
 const Footer = () => {
   const [messageIsOpen, setMessageIsOpen] = useState(false);
   const [playCloseAnimation, setPlayCloseAnimation] = useState(false);
+
+  const {
+    setOpen: setOpenProjects,
+    collapse: collapseProjects,
+    clicked: clickedProjects,
+  } = useCollapse();
+
+  const {
+    setOpen: setOpenSocials,
+    collapse: collapseSocials,
+    clicked: clickedSocials,
+  } = useCollapse();
+
   const toggleContactMessageHandler = () => {
     setPlayCloseAnimation(true);
 
@@ -102,6 +116,114 @@ const Footer = () => {
     },
   ];
 
+  const projectsAndContactLarge = (
+    <div
+      className={`${classes.projectsAndContact} ${classes.projectsAndContactLarge}`}
+    >
+      <div className={classes.projects}>
+        <div className={classes.heading}>
+          <img src={ProjectsCategory} alt="Projects Icon" />
+          <h4>projects</h4>
+        </div>
+
+        {projects.map((item, index) => (
+          <div key={index} className={classes.footerItem}>
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className={classes.itemHeading}
+            >
+              <img src={item.icon} alt={item.icon} />
+              <span className={classes.footerItemHeading}>{item.title}</span>
+            </a>
+            <div className={classes.footerItemText}>{item.content}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className={classes.socials}>
+        <div className={classes.heading}>
+          <img src={SocialsCategory} alt="Socials Icon" />
+          <h4>socials</h4>
+        </div>
+
+        {socials.map((item, index) => (
+          <div key={index} className={classes.footerItem}>
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className={classes.itemHeading}
+            >
+              <img src={item.icon} alt={item.icon} />
+              <span className={classes.footerItemHeading}>{item.title}</span>
+            </a>
+            <div className={classes.footerItemText}>{item.content} </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const projectsAndContactSmall = (
+    <div
+      className={`${classes.projectsAndContact} ${classes.projectsAndContactSmall}`}
+    >
+      <div className={`${classes.projects} ${collapseProjects}`}>
+        <div
+          className={`${classes.heading} ${clickedProjects}`}
+          onClick={() => setOpenProjects((prevState) => !prevState)}
+        >
+          <img src={ProjectsCategory} alt="Projects Icon" />
+          <h4>projects</h4>
+          <span></span>
+        </div>
+
+        {projects.map((item, index) => (
+          <div key={index} className={classes.footerItem}>
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className={classes.itemHeading}
+            >
+              <img src={item.icon} alt={item.icon} />
+              <span className={classes.footerItemHeading}>{item.title}</span>
+            </a>
+            <div className={classes.footerItemText}>{item.content}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className={`${classes.socials} ${collapseSocials}`}>
+        <div
+          className={`${classes.heading} ${clickedSocials}`}
+          onClick={() => setOpenSocials((prevState) => !prevState)}
+        >
+          <img src={SocialsCategory} alt="Socials Icon" />
+          <h4>socials</h4>
+          <span></span>
+        </div>
+
+        {socials.map((item, index) => (
+          <div key={index} className={classes.footerItem}>
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className={classes.itemHeading}
+            >
+              <img src={item.icon} alt={item.icon} />
+              <span className={classes.footerItemHeading}>{item.title}</span>
+            </a>
+            <div className={classes.footerItemText}>{item.content} </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <footer id="footer" className={classes.footer}>
       <div className="sectionEdge">
@@ -148,55 +270,8 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className={classes.projectsAndContact}>
-          <div className={classes.projects}>
-            <div className={classes.heading}>
-              <img src={ProjectsCategory} alt="Projects Icon" />
-              <h4>projects</h4>
-            </div>
-
-            {projects.map((item, index) => (
-              <div key={index} className={classes.footerItem}>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className={classes.itemHeading}
-                >
-                  <img src={item.icon} alt={item.icon} />
-                  <span className={classes.footerItemHeading}>
-                    {item.title}
-                  </span>
-                </a>
-                <div className={classes.footerItemText}>{item.content}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className={classes.socials}>
-            <div className={classes.heading}>
-              <img src={SocialsCategory} alt="Socials Icon" />
-              <h4>socials</h4>
-            </div>
-
-            {socials.map((item, index) => (
-              <div key={index} className={classes.footerItem}>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className={classes.itemHeading}
-                >
-                  <img src={item.icon} alt={item.icon} />
-                  <span className={classes.footerItemHeading}>
-                    {item.title}
-                  </span>
-                </a>
-                <div className={classes.footerItemText}>{item.content} </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {projectsAndContactLarge}
+        {projectsAndContactSmall}
       </div>
 
       <div className={classes.copyrights}>Copyright © Tomer Bourstein</div>

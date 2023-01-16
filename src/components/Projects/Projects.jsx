@@ -78,14 +78,27 @@ const Projects = () => {
         ))}
       </div>
 
-      <RoundedRectangle
-        onClick={buttonClickHandler}
-        top={true}
-        title="for additional projects"
-        titleIcon={GitHub}
-        subtitle="visit my GitHub"
-        hover={true}
-      />
+      <div className={classes.gitHubButtonLargeScreen}>
+        <RoundedRectangle
+          onClick={buttonClickHandler}
+          top={true}
+          title="for additional projects"
+          titleIcon={GitHub}
+          subtitle="visit my GitHub"
+          hover={true}
+        />
+      </div>
+
+      <div className={classes.gitHubButtonSmallScreen}>
+        <RoundedRectangle
+          onClick={buttonClickHandler}
+          top={true}
+          title="more projects"
+          titleIcon={GitHub}
+          subtitle="GitHub"
+          hover={true}
+        />
+      </div>
     </section>
   );
 };

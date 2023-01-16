@@ -1,4 +1,5 @@
 .heyThere {
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -48,5 +49,27 @@
   }
   100% {
     width: 7.2rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  .heyThere {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 431px) {
+  h1 {
+      line-height: 1;
+    font-size: 2.6rem !important;
+  }
+
+  .heyThere {
+    width: 21rem;
+    margin: 0 auto inherit;
   }
 }
