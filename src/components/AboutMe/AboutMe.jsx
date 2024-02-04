@@ -3,7 +3,7 @@ import useCheckScroll from "../../hooks/useCheckScroll";
 import RoundedRectangle from "../UI/RoundedRectangle";
 import About from "../../assets/icons/about.png";
 import Download from "../../assets/icons/download.png";
-import cv from "../../assets/files/tb-cv-jan-23.pdf";
+import cv from "../../assets/files/tb-cv-24.pdf";
 
 const AboutMe = () => {
   const { firstP, secondP, thirdP } = useCheckScroll(false);
@@ -14,7 +14,7 @@ const AboutMe = () => {
   const downloadHandler = () => {
     var link = document.createElement("a");
     link.href = cv;
-    link.download = "Tomer-2023.pdf";
+    link.download = "Tomer-2024.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
